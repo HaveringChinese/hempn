@@ -1,0 +1,19 @@
+button :hover {
+  cursor: pointer;
+}
+
+.card {
+  background-color: greenyellow;
+  width: 20%;
+  height: 20%;
+}
+
+.cart {
+  background-color: orange;
+  width: 10%;
+  height: 10%;
+}
+
+.profile-image {
+  width: 30px;
+}
