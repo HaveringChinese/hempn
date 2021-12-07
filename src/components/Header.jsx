@@ -1,4 +1,5 @@
 import React from "react";
+import Register from "./Register";
 
 function Header() {
 
@@ -7,6 +8,7 @@ function Header() {
       <button className="menu-button">三</button>
       <button className="account-button"><img alt="profile" className="profile-image" src="../static/images/user.png"></img></button>
       <Cart />
+      <Register />
     </div>
   )
 }
