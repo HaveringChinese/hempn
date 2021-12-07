@@ -1,25 +1,38 @@
 import React, {useState} from "react";
-import CarouselPics from "../data/images";
+import carouselPics from "./images";
 
 function ImageCarousel(){
 
-  const [carouselImage, setCarouselImage] = useState("../public/static/images/hemp background 1.jpg");
-  const [carouselAltText, setCarouselAltText] = useState("sunshine streaming down onto a field of hemp");
+  var i = 0;
+  var counter = carouselPics.length;
+  const [carouselImage, setCarouselImage] = useState(carouselPics[i].source);
+  const [carouselAltText, setCarouselAltText] = useState(carouselPics[i].alternative);
+  
+  console.log(carouselPics[0].source);
+
+  function carouselCycleCounter(){
+    counter-=1;
+    if(counter===0){
+      i = 0;
+    }
+  }
 
   function cycleCarousel(){
-    setCarouselImage()
+    i++;
+    setCarouselImage(carouselPics[i].source);
+    setCarouselAltText(carouselPics[i].alternative);
+    carouselCycleCounter();
 }
 
-setInterval(cycleCarousel, 5000);
+// setInterval(cycleCarousel, 2000);
 
 
   return (
     <div>
 
       <div className="carouselStructure">
-
       <img src={carouselImage} alt={carouselAltText}></img>
-
+      <img src="public/images/hemp-field.jpg" alt="ll"></img>
 
       </div>
     </div>

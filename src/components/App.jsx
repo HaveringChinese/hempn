@@ -13,7 +13,9 @@ function App(){
   return (
     <div>
     <Header />
-    <ImageCarousel />\
+    <ImageCarousel />
+
+    <img alt="field of hemp" className="hemp-field"></img>
 
     
     {timeOfDay < 12 && <Menu greeting = "Good Morning!"/>}
