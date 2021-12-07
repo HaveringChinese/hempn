@@ -1,4 +1,5 @@
 import React from "react";
+import Banner from "./Banner";
 import Header from "./Header";
 import ImageCarousel from "./ImageCarousel";
 import Menu from "./Menu";
@@ -12,6 +13,9 @@ function App(){
 
   return (
     <div>
+    <Banner 
+    className = "header"
+    />
     <Header />
     <ImageCarousel />
 
@@ -39,9 +43,9 @@ function App(){
     description = "Bulk industrial hemp."
     price = "$.40/lb"
     />
-
+    
     <p>Copyright {date}</p>
-
+    <Banner className="footer" />
 
     </div>
   )
