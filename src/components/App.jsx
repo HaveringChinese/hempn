@@ -1,4 +1,6 @@
 import React from "react";
+import M from "materialize-css";
+// /materialize-css/dist/css/materialize.min.css
 import Banner from "./Banner";
 import Header from "./Header";
 import ImageCarousel from "./ImageCarousel";
