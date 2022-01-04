@@ -1,45 +1,46 @@
 import React from "react";
-import M from "materialize-css";
-// /materialize-css/dist/css/materialize.min.css
 import Banner from "./Banner";
-import Header from "./Header";
-import ImageCarousel from "./ImageCarousel";
-import Menu from "./Menu";
+import Initial from "./Initial.jsx";
 import Main from "./Main";
 import ProductTile from "./ProductTile";
+import { useState } from "react";
 
-const timeOfDay = new Date().getHours();
+const date = new Date().getFullYear();
 
 function App(){
 
-  const date = new Date().getFullYear();
+  const [page, setPage] = useState('initial');
+
 
   return (
     <div>
     <Banner 
-    className = "header"
+    className = "header-banner"
+    textClassName = "header-banner-text"
+    text = "Hempn"
     />
-    <Header />
-    <ImageCarousel />
 
-    <img alt="field of hemp" className="hemp-field" src></img>
+    {/* <ImageCarousel /> */}
 
-    
-    {timeOfDay < 12 && <Menu greeting = "Good Morning!"/>}
-    {timeOfDay > 12 && timeOfDay < 19 && <Menu greeting = "Good Afternoon!"/>}
-    {timeOfDay >= 19 && <Menu greeting = "Good Evening!"/>}
+    {page === "initial" && <Initial number = {0}/>}
 
-    <Main />
-    
+    {/* <img alt="field of hemp" className="hemp-field" src></img> */}
 
+    {/* only loads if "shop" is clicked */}
+    {page === "shop" && <Main />}
+    {page === "shop" && 
     <ProductTile 
     name = "hemp (raw)"
     description = "Bulk industrial hemp."
     price = "$.40/lb"
-    />
+    />}
     
-    <p>Copyright {date}</p>
-    <Banner className="footer" />
+    <Banner 
+    className = "footer-banner"
+    textClassName = "footer-banner-text"
+    text = "Copyright "
+    date = {date}
+     />
 
     </div>
   )
