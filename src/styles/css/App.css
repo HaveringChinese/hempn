@@ -81,6 +81,17 @@ body {
   margin: auto auto auto 50px;
 }
 
+.carousel-buttons {
+  display: relative;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  z-index: 1;
+  position: absolute;
+  top: 60%;
+  left: 30%;
+}
+
 .header {
   display: flex;
   justify-content: center;

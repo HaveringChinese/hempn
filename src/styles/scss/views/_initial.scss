@@ -33,6 +33,15 @@
   }
 }
 
+.carousel-buttons {
+  @include p.flex(relative);
+  @include p.flexCenter();
+  z-index: 1;
+  position: absolute;
+  top: 60%;
+  left: 30%;
+}
+
 .header {
   @include p.flex(flex);
   position: relative;

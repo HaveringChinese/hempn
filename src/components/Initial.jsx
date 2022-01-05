@@ -38,13 +38,28 @@ function Initial(props){
   
   var location = pics[props.number];
 
-  const [clicked, setClicked] = useState("");
+  const [pageClicked, setClicked] = useState("");
+  const [directionClicked, setDirectionClicked] = useState("");
 
-  function handleClick(event){
+  function handlePageClick(event){
     setClicked(event.target.name);
-    console.log(clicked);
-  }
+    console.log("button clicked is " + event.target.name);
+    props.handlePageChange(pageClicked);
+    console.log(pageClicked);
+  };
 
+  function handleDirection(event){
+    setDirectionClicked(event.target.name)
+    if (directionClicked === "right"){
+      while (location < pics.length){
+        location ++;
+      }
+     } else if (directionClicked === "left"){
+        while (location > -1){
+          location --;
+        };
+      };
+    };
 
 
   return (
@@ -52,8 +67,12 @@ function Initial(props){
       <Header/>
       <img className = {location.className} src = {location.source} alt = {location.alternative}></img>
       <div className="buttons">
-        <button className="left-button" onClick={handleClick} name="shop">Purchase Hemp-based Products</button>
-        <button className="right-button" onClick={handleClick} name="grow">Start Growing, Start Earning</button>
+        <button className="left-button" onClick={handlePageClick} name="shop">Purchase Hemp-based Products</button>
+        <button className="right-button" onClick={handlePageClick} name="grow">Start Growing, Start Earning</button>
+      </div>
+      <div className="carousel-buttons">
+        <button className="leftward-button" onClick={handleDirection} name="left">Left</button>
+        <button className="rightward-button" onClick={handleDirection} name="right">Right</button>
       </div>
     </div>
   )

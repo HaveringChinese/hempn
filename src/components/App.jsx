@@ -3,54 +3,55 @@ import Banner from "./Banner";
 import Initial from "./Initial.jsx";
 import Main from "./Main";
 import ProductTile from "./ProductTile";
+import Grow from "./Grow";
 
 
 function App(){
 
   const [page, setPage] = useState('initial');
 
-  function handlePageChange(){
-    
-
-  }
+  function handlePageChange(newPage){
+    return setPage(newPage);
+  };
 
 
   return (
-    <div>
+    <div className="App">
     
-    <Banner 
-    className = "header-banner"
-    textClassName = "header-banner-text"
-    text = "Hempn"
-    button = "menu"
-    />
+      <Banner 
+      className = "header-banner"
+      textClassName = "header-banner-text"
+      text = "Hempn"
+      button = "menu"
+      />
 
-    {/* <ImageCarousel /> */}
+      {/* only loads on arrival */}
+      {page === "initial" && <Initial 
+      handlePageChange = {handlePageChange}
+      number = {0}
+      
+      />
+      };
 
-    {page === "initial" && <Initial 
-    
-    number = {0}
-    
-    />
-    };
 
-    {/* <img alt="field of hemp" className="hemp-field" src></img> */}
+      {/* only loads if "shop" is clicked */}
+      {page === "shop" && <Main />}
+      {page === "shop" && 
+      <ProductTile 
+      name = "hemp (raw)"
+      description = "Bulk industrial hemp."
+      price = "$.40/lb"
+      />}
 
-    {/* only loads if "shop" is clicked */}
-    {page === "shop" && <Main />}
-    {page === "shop" && 
-    <ProductTile 
-    name = "hemp (raw)"
-    description = "Bulk industrial hemp."
-    price = "$.40/lb"
-    />}
-    
-    <Banner 
-    className = "footer-banner"
-    textClassName = "footer-banner-text"
-    text = "Copyright "
-    date = "date"
-     />
+      {/* only loads if "grow" is clicked */}
+      {page === "grow" && <Grow />}
+      
+      <Banner 
+      className = "footer-banner"
+      textClassName = "footer-banner-text"
+      text = "Copyright "
+      date = "date"
+      />
 
     </div>
   )
