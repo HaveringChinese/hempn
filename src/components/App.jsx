@@ -1,28 +1,38 @@
-import React from "react";
+import React, {useState} from "react";
 import Banner from "./Banner";
 import Initial from "./Initial.jsx";
 import Main from "./Main";
 import ProductTile from "./ProductTile";
-import { useState } from "react";
 
-const date = new Date().getFullYear();
 
 function App(){
 
   const [page, setPage] = useState('initial');
 
+  function handlePageChange(){
+    
+
+  }
+
 
   return (
     <div>
+    
     <Banner 
     className = "header-banner"
     textClassName = "header-banner-text"
     text = "Hempn"
+    button = "menu"
     />
 
     {/* <ImageCarousel /> */}
 
-    {page === "initial" && <Initial number = {0}/>}
+    {page === "initial" && <Initial 
+    
+    number = {0}
+    
+    />
+    };
 
     {/* <img alt="field of hemp" className="hemp-field" src></img> */}
 
@@ -39,7 +49,7 @@ function App(){
     className = "footer-banner"
     textClassName = "footer-banner-text"
     text = "Copyright "
-    date = {date}
+    date = "date"
      />
 
     </div>

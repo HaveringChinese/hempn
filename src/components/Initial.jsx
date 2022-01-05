@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Header from "./Header";
 import field from "./images/hemp-field.jpg"; 
 import haze from "./images/hemp-haze.jpg"; 
@@ -33,15 +33,28 @@ import wakefilde from "./images/wakefilde-on-a-green.jpg";
 
 ]
 
+
 function Initial(props){
   
   var location = pics[props.number];
+
+  const [clicked, setClicked] = useState("");
+
+  function handleClick(event){
+    setClicked(event.target.name);
+    console.log(clicked);
+  }
+
+
 
   return (
     <div className="initial">
       <Header/>
       <img className = {location.className} src = {location.source} alt = {location.alternative}></img>
-
+      <div className="buttons">
+        <button className="left-button" onClick={handleClick} name="shop">Purchase Hemp-based Products</button>
+        <button className="right-button" onClick={handleClick} name="grow">Start Growing, Start Earning</button>
+      </div>
     </div>
   )
 }

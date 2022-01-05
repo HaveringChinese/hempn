@@ -1,0 +1,17 @@
+
+@mixin banner($position) {
+  position: $position;
+  height: 100px;
+  width: 100vw;
+  z-index: 10;
+}
+
+@mixin flex($type) {
+  display: $type;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexCenter {
+  align-content: center;
+}

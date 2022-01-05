@@ -1,0 +1,49 @@
+@use "../abstracts/" as *;
+@use "../pieces/" as p;
+
+body {
+  position: relative;
+  margin: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.header-banner {
+  @include p.banner(fixed);
+  @include p.flex(flex);
+  background-color: $foundationColor;
+  
+  .header-banner-text {
+    @include p.flexCenter();
+    font-size: $headingSize;
+    color: $textColor;  
+  }
+  .menu-button {
+    @include p.flexCenter();
+    background-color: $foundationColor;
+    width: 40px;
+    height: 40px;
+    color: $textColor;
+    border: solid 1px $textColor;
+
+    & ::hover {
+      background-color: $accentColor;
+      color: $foundationColor;
+    }
+
+  }
+}
+
+.footer-banner {
+  @include p.banner(absolute);
+  bottom: 0;
+  left: 0;
+  @include p.flex(flex);
+  background-color: $foundationColor;
+
+  .footer-banner-text {
+    @include p.flexCenter();
+    font-size: 1rem;
+    color: $textColor;
+  }
+}

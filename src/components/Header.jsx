@@ -10,9 +10,7 @@ function Header() {
 
   return(
     <div className="header">
-      <button className="menu-button">三</button>
-      <button className="account-button"><img alt="profile" className="profile-image" src="../static/images/user.png"></img></button>
-
+      
       {timeOfDay < 12 && <Menu greeting = "Good Morning!"/>}
       {timeOfDay > 12 && timeOfDay < 19 && <Menu greeting = "Good Afternoon!"/>}
       {timeOfDay >= 19 && <Menu greeting = "Good Evening!"/>}
