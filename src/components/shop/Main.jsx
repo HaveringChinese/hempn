@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-import "../components/images/single-hemp.jpg";
+import ProductTile from "./ProductTile";
+import SingleHemp from "../images/single-hemp.jpg";
 
 function Main(){
 
@@ -22,7 +23,7 @@ function Main(){
   return (
     <div className="Main">
       
-      <img src="../components/images/single-hemp.jpg" alt="single hemp plant"></img>
+      <img src={SingleHemp} alt="single hemp plant"></img>
 
       <div>
       <h1>Hempn</h1>
@@ -45,6 +46,14 @@ function Main(){
           return <li>{strat}</li>
         })}
       </ul>
+
+       
+      <ProductTile 
+      name = "hemp (raw)"
+      description = "Bulk industrial hemp."
+      price = "$.40/lb"
+      />
+
       </main>   
 </div>
   )

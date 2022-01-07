@@ -35,7 +35,7 @@
 
 .carousel-buttons {
   @include p.flex(flex);
-  justify-content: space-between;
+  justify-content: space-evenly;
   @include p.flexCenter();
   margin-left: 10vw;
   width: 80vw;
@@ -46,10 +46,16 @@
   .leftward-button {
     top: 10%;
     left: 15%;
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
   }
-  .rigthward-button {
+  .rightward-button {
     top: 10%;
     right: 15%;
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
   }
 }
 

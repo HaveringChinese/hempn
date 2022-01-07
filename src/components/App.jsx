@@ -1,9 +1,8 @@
-import React, { useState, useEffect} from "react";
-import Banner from "./Banner";
-import Initial from "./Initial.jsx";
-import Main from "./Main";
-import ProductTile from "./ProductTile";
-import Grow from "./Grow";
+import React, { useState} from "react";
+import Banner from "./constant/Banner";
+import Initial from "./initial/Initial.jsx";
+import Main from "./shop/Main";
+import Grow from "./grow/Grow";
 
 
 function App(){
@@ -13,19 +12,16 @@ function App(){
   function handlePageChange(newPage){
     return setPage(newPage);
   };
-
-  useEffect(() => {
-    return page;
-  });
   
   return (
     <div className="App">
     
-      <Banner 
+      <Banner
       className = "header-banner"
       textClassName = "header-banner-text"
       text = "Hempn"
       button = "menu"
+      handlePageChange = {handlePageChange}
       />
 
       {/* only loads on arrival */}
@@ -37,12 +33,7 @@ function App(){
 
       {/* only loads if "shop" is clicked */}
       {page === "shop" && <Main />}
-      {page === "shop" && 
-      <ProductTile 
-      name = "hemp (raw)"
-      description = "Bulk industrial hemp."
-      price = "$.40/lb"
-      />}
+      
 
       {/* only loads if "grow" is clicked */}
       {page === "grow" && <Grow />}

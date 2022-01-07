@@ -87,7 +87,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-content: center;
   margin-left: 10vw;
   width: 80vw;
@@ -98,10 +98,16 @@ body {
 .carousel-buttons .leftward-button {
   top: 10%;
   left: 15%;
+  font-size: 2rem;
+  background-color: transparent;
+  border: none;
 }
-.carousel-buttons .rigthward-button {
+.carousel-buttons .rightward-button {
   top: 10%;
   right: 15%;
+  font-size: 2rem;
+  background-color: transparent;
+  border: none;
 }
 
 .header {

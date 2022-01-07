@@ -1,32 +1,32 @@
 import React, { useState, useEffect } from "react";
-import Header from "./Header";
-import field from "./images/hemp-field.jpg"; 
-import haze from "./images/hemp-haze.jpg"; 
-import single from "./images/single-hemp.jpg"; 
-import wakefilde from "./images/wakefilde-on-a-green.jpg"; 
+import Header from "./InitialHeader";
+import Field from "../images/hemp-field.jpg"; 
+import Haze from "../images/hemp-haze.jpg"; 
+import Single from "../images/single-hemp.jpg"; 
+import Wakefilde from "../images/wakefilde-on-a-green.jpg";
  
  const pics = [
   {
     key: 1,
-    source: field,
+    source: Field,
     alternative: "sunshine streaming down onto a field of hemp",
     className: "carousel-image"
   },
   
   {key: 2,
-    source: haze,
+    source: Haze,
     alternative: "mountain valley field of hemp",
     className: "carousel-image"
   },
   
   {key: 3,
-    source: single,
+    source: Single,
     alternative: "closeup of a hazy patch of hemp",
     className: "carousel-image"
   },
 
   {key: 4,
-    source: wakefilde,
+    source: Wakefilde,
     alternative: "closeup of a hazy patch of hemp",
     className: "carousel-image"
   },
@@ -37,14 +37,19 @@ import wakefilde from "./images/wakefilde-on-a-green.jpg";
 function Initial(props){
 
   
-  const [pageClicked, setClicked] = useState("");
+  const [pageClicked, setClicked] = useState("initial");
   const [image, setImage] = useState(0);
   
+ 
+
   function handlePageClick(event){
     setClicked(event.target.name);
     console.log("button clicked is " + event.target.name);
-    };
-  
+     };
+
+     useEffect(() => {
+      return props.handlePageChange(pageClicked);
+   }, [props, pageClicked]);
 
   function cycleLeft(){
       if (image > 0){
@@ -62,21 +67,6 @@ function Initial(props){
       }
     };
 
-    // useEffect(() => {
-    //   console.log(pageClicked, image)
-
-    //   // if (image === "right" && location < pics.length){
-    //   //   location ++;
-    //   // } else if (image === "left" && location > 0){
-    //   //   location --;
-    //   // } else {
-    //   // }
-
-
-    //   // return props.handlePageChange(pageClicked)
-      
-    //   }, [pageClicked, image]);
-
 
   return (
     <div className="initial">
@@ -89,8 +79,8 @@ function Initial(props){
       {image === 3 && <img className = {pics[3].className} src = {pics[3].source} alt = {pics[3].alternative}></img>}
 
       <div className="carousel-buttons">
-        <button className="leftward-button" onClick={cycleLeft} name="left"></button>
-        <button className="rightward-button" onClick={cycleRight} name="right">Right</button>
+        <button className="leftward-button" onClick={cycleLeft} name="left">←</button>
+        <button className="rightward-button" onClick={cycleRight} name="right">→</button>
       </div>
 
       <div className="buttons">
