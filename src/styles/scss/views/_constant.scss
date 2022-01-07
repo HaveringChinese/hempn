@@ -18,20 +18,22 @@ body {
     font-size: $headingSize;
     color: $textColor;  
   }
-  .menu-button {
-    @include p.flexCenter();
-    background-color: $foundationColor;
-    width: 40px;
-    height: 40px;
-    color: $textColor;
-    border: solid 1px $textColor;
+}
 
-    & ::hover {
-      background-color: $accentColor;
-      color: $foundationColor;
-    }
+.menu-button {
+  position: absolute;
+  left: 15%;
+  background-color: $foundationColor;
+  width: 40px;
+  height: 40px;
+  color: $textColor;
+  border: solid 1px $textColor;
 
+  &:hover {
+    background-color: $accentColor;
+    color: $foundationColor;
   }
+
 }
 
 .footer-banner {

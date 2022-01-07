@@ -16,7 +16,7 @@
   }
 
   .buttons {
-    @include p.flex(relative);
+    @include p.flex(flex);
     @include p.flexCenter();
     z-index: 1;
     position: absolute;
@@ -34,12 +34,23 @@
 }
 
 .carousel-buttons {
-  @include p.flex(relative);
+  @include p.flex(flex);
+  justify-content: space-between;
   @include p.flexCenter();
+  margin-left: 10vw;
+  width: 80vw;
   z-index: 1;
   position: absolute;
-  top: 60%;
-  left: 30%;
+  top: 10%;
+
+  .leftward-button {
+    top: 10%;
+    left: 15%;
+  }
+  .rigthward-button {
+    top: 10%;
+    right: 15%;
+  }
 }
 
 .header {

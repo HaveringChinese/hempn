@@ -20,15 +20,17 @@ body {
   font-size: 3rem;
   color: white;
 }
-.header-banner .menu-button {
-  align-content: center;
+
+.menu-button {
+  position: absolute;
+  left: 15%;
   background-color: #333232;
   width: 40px;
   height: 40px;
   color: white;
   border: solid 1px white;
 }
-.header-banner .menu-button ::hover {
+.menu-button:hover {
   background-color: #fffdf0;
   color: #333232;
 }
@@ -65,7 +67,7 @@ body {
   padding: 20px;
 }
 .initial .buttons {
-  display: relative;
+  display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -82,14 +84,24 @@ body {
 }
 
 .carousel-buttons {
-  display: relative;
+  display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: space-between;
   align-content: center;
+  margin-left: 10vw;
+  width: 80vw;
   z-index: 1;
   position: absolute;
-  top: 60%;
-  left: 30%;
+  top: 10%;
+}
+.carousel-buttons .leftward-button {
+  top: 10%;
+  left: 15%;
+}
+.carousel-buttons .rigthward-button {
+  top: 10%;
+  right: 15%;
 }
 
 .header {

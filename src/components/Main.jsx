@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import "../components/images/single-hemp.jpg";
 
 function Main(){
 
@@ -21,6 +22,8 @@ function Main(){
   return (
     <div className="Main">
       
+      <img src="../components/images/single-hemp.jpg" alt="single hemp plant"></img>
+
       <div>
       <h1>Hempn</h1>
       <p>Our 5 Year Mission: To Boldly Grow Hemp Where No One Has Grown Before</p>

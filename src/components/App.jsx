@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState, useEffect} from "react";
 import Banner from "./Banner";
 import Initial from "./Initial.jsx";
 import Main from "./Main";
@@ -14,7 +14,10 @@ function App(){
     return setPage(newPage);
   };
 
-
+  useEffect(() => {
+    return page;
+  });
+  
   return (
     <div className="App">
     
@@ -27,9 +30,7 @@ function App(){
 
       {/* only loads on arrival */}
       {page === "initial" && <Initial 
-      handlePageChange = {handlePageChange}
-      number = {0}
-      
+      handlePageChange = {handlePageChange}      
       />
       };
 
