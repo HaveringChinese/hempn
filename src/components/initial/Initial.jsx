@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Header from "./InitialHeader";
+import Greeting from "./Greeting";
 import Field from "../images/hemp-field.jpg"; 
 import Haze from "../images/hemp-haze.jpg"; 
 import Single from "../images/single-hemp.jpg"; 
@@ -71,7 +71,7 @@ function Initial(props){
   return (
     <div className="initial">
       
-      <Header/>
+      <Greeting/>
      
       {image === 0 && <img className = {pics[0].className} src = {pics[0].source} alt = {pics[0].alternative}></img>}
       {image === 1 && <img className = {pics[1].className} src = {pics[1].source} alt = {pics[1].alternative}></img>}

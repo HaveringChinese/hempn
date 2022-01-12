@@ -15,3 +15,9 @@
 @mixin flexCenter {
   align-content: center;
 }
+
+@mixin primaryButton {
+  width: 100%;
+  height: fit-content;
+  font-size: 2rem;
+}

@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import ColorfulHemp from "../images/kym-mackinnon-colorful-hemp.jpg";
 
 function Login(){
 
@@ -25,6 +26,7 @@ function Login(){
   
   return (
     <div>
+    <img src={ColorfulHemp} className="carousel-image" alt="hemp field with colorful sunset background"></img>
     <h1>Welcome {contact.fName} {contact.lName}</h1>
     <p>{contact.email}</p>
     <input name="fName" onChange={handleChange} placeholder="First Name"></input>

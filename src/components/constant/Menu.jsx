@@ -1,12 +1,8 @@
-import React, { useState } from "react";
-import Register from "./Register";
-import Login from "./Login";
+import React from "react";
 
 
 function Menu(props){
 
-  const [clickedRegister, setClickedRegister] = useState("unclicked");
-  const [clickedLogin, setClickedLogin] = useState("unclicked");
 
   function handleClick(event){
     switch(event.target.name) {
@@ -20,10 +16,10 @@ function Menu(props){
         props.handlePageChange("grow");
       break;
       case "register":
-        setClickedRegister("clicked");
+        props.handlePageChange("register");
         break;
       case "login":
-        setClickedLogin("clicked")
+        props.handlePageChange("login");
         break;
       default:
         // code block
@@ -31,7 +27,7 @@ function Menu(props){
   }
 
   return (
-    <div>
+    <div className="menu" onMouseLeave={props.handleExit}>
       <div className="menu-header">
         <p>Get Hempn!</p>
       </div>
@@ -40,9 +36,6 @@ function Menu(props){
       <button name="grow" onClick={handleClick}>Grow</button>
       <button name="register" onClick={handleClick}>Register</button>
       <button name="login" onClick={handleClick}>Login</button>
-
-      {clickedRegister === "clicked" && <Register />}
-      {clickedLogin === "clicked" && <Login />}
       
     </div>
   )

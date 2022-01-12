@@ -3,6 +3,8 @@ import Banner from "./constant/Banner";
 import Initial from "./initial/Initial.jsx";
 import Main from "./shop/Main";
 import Grow from "./grow/Grow";
+import Register from "./constant/Register";
+import Login from "./constant/Login";
 
 
 function App(){
@@ -34,9 +36,15 @@ function App(){
       {/* only loads if "shop" is clicked */}
       {page === "shop" && <Main />}
       
-
       {/* only loads if "grow" is clicked */}
       {page === "grow" && <Grow />}
+
+      {/* only loads if "register" is clicked */}
+      {page === "register" && <Register />}
+
+      {/* only loads if "Login" is clicked */}
+      {page === "login" && <Login />}
+
       
       <Banner 
       className = "footer-banner"

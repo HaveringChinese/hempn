@@ -33,6 +33,40 @@ body {
 .menu-button:hover {
   background-color: #fffdf0;
   color: #333232;
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  left: 0%;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  flex-direction: column;
+  row-gap: 20px;
+  min-width: 300px;
+  padding: 10px 10px;
+  min-height: fit-content;
+  background-color: #333232;
+}
+.menu .menu-header {
+  font-size: 3rem;
+  color: white;
+}
+.menu button {
+  width: 100%;
+  height: fit-content;
+  font-size: 2rem;
+  background-color: #333232;
+  border: solid white 2px;
+  color: white;
+}
+.menu button:hover {
+  background-color: white;
+  color: #333232;
+  cursor: pointer;
 }
 
 .footer-banner {
@@ -56,15 +90,18 @@ body {
 .initial {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 75% 1fr;
+  grid-template-rows: repeat(1fr, auto);
 }
 .initial button {
-  background-color: #bac7ba;
+  background-color: transparent;
   border: solid #333232;
   color: #333232;
   font-size: 1.5rem;
   padding: 20px;
+}
+.initial button:hover {
+  cursor: pointer;
 }
 .initial .buttons {
   display: flex;
@@ -72,15 +109,25 @@ body {
   align-items: center;
   align-content: center;
   z-index: 1;
+  grid-column: 2/3;
+  width: 100%;
   position: absolute;
-  top: 30%;
-  left: 30%;
+  top: 25%;
+  left: 0%;
 }
 .initial .left-button {
   margin: auto 50px auto auto;
+  color: #fffdf0;
+}
+.initial .left-button:hover {
+  box-shadow: inset 0 0 0 5px #fffdf0;
 }
 .initial .right-button {
   margin: auto auto auto 50px;
+  color: #fffdf0;
+}
+.initial .right-button:hover {
+  box-shadow: inset 0 0 0 5px #fffdf0;
 }
 
 .carousel-buttons {
@@ -98,29 +145,52 @@ body {
 .carousel-buttons .leftward-button {
   top: 10%;
   left: 15%;
-  font-size: 2rem;
+  font-size: 3rem;
   background-color: transparent;
   border: none;
+}
+.carousel-buttons .leftward-button:hover {
+  color: white;
 }
 .carousel-buttons .rightward-button {
   top: 10%;
   right: 15%;
-  font-size: 2rem;
+  font-size: 3rem;
   background-color: transparent;
   border: none;
 }
+.carousel-buttons .rightward-button:hover {
+  color: white;
+}
 
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  top: 150px;
-  height: 100px;
-  z-index: 1;
+@keyframes fadeAway {
+  to {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+}
+.greeting {
+  position: absolute;
+  top: 0%;
+  right: 37%;
+  width: fit-content;
+  grid-column: 2/3;
+  z-index: 10;
+  animation: fadeAway 0s ease-in 3s;
+  animation-fill-mode: forwards;
+}
+.greeting p {
+  font-size: 1rem;
+  color: white;
+}
+.greeting.hide {
+  display: none;
 }
 
 .carousel-image {
+  grid-column: 1/4;
+  grid-row: auto;
   width: 100%;
   height: 100%;
   z-index: 0;

@@ -32,8 +32,41 @@ body {
   &:hover {
     background-color: $accentColor;
     color: $foundationColor;
+    cursor: pointer;
   }
 
+}
+
+.menu {
+  position: absolute;
+  left: 0%;
+  top: 100px;
+  @include p.flex(flex);
+  align-self: flex-start;
+  flex-direction: column;
+  row-gap: 20px; 
+  min-width: 300px;
+  padding: 10px 10px;
+  min-height: fit-content;
+  background-color: $foundationColor;
+
+    .menu-header {
+      font-size: $headingSize;
+      color: $textColor;
+    }
+  
+    button {
+      @include p.primaryButton;
+      background-color: $foundationColor;
+      border: solid $textColor 2px;
+      color: $textColor;
+
+      &:hover {
+        background-color: $textColor;
+        color: $foundationColor;
+        cursor: pointer;
+      }
+  }
 }
 
 .footer-banner {
