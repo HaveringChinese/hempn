@@ -1,0 +1,12 @@
+@use "../pieces/" as p;
+@use "../abstracts/" as *;
+
+.grow-carousel {
+  height: 25vh;
+  width: 50vw;
+
+  .grow-carousel-item {
+    height: 25vh;
+    width: 50vw;
+  }
+}

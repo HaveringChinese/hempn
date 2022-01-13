@@ -30,8 +30,7 @@ function App(){
       {page === "initial" && <Initial 
       handlePageChange = {handlePageChange}      
       />
-      };
-
+      }
 
       {/* only loads if "shop" is clicked */}
       {page === "shop" && <Main />}

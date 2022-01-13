@@ -1,0 +1,38 @@
+@use "../pieces/" as p;
+@use "../abstracts/" as *;
+
+
+.main {
+  margin: 0 0;
+  position: relative;
+  top: 100px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+
+  main {
+    grid-column: 2/11;
+    grid-template-rows: 6/12;
+  }
+}
+
+.main-header {
+  position: relative;
+  grid-column: 1/13;
+  grid-row: 1/5;
+
+  .main-header-image {
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    z-index: 0;
+   }
+
+  .main-header-text {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    z-index: 1;
+    color: $textColor;
+  }
+}
