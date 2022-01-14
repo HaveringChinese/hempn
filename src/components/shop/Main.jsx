@@ -8,6 +8,7 @@ function Main(){
   const [input, setInput] = useState("");
   const [strategies, setStrategies] = useState([]);
   const [cart, updateCart] = useState(0);
+  const [sequestered, updateSequestered] = useState(0);
 
   function handleStrategies(event){
     const newInput = event.target.value;
@@ -22,9 +23,11 @@ function Main(){
     setInput("");
   };
 
-  function addPurchases(purchases){
-    updateCart(cart + purchases);
+  function addPurchases(carbon){
+    updateCart(cart + 1);
+    updateSequestered(sequestered + carbon);
   };
+  
 
   return (
     <div className="main">
@@ -47,7 +50,7 @@ function Main(){
         <div className="cart-container">
 
           <h1 className="shopping-cart">
-            {cart}
+            Your {cart} purchases will sequester {sequestered} pounds of Carbon Dioxide (CO2). Congrats!
           </h1>
 
         </div>
@@ -58,9 +61,13 @@ function Main(){
           {Products.map((product) => {
             return <ProductTile
             key = {product.key}
+            id = {product.id}
+            source = {product.source}
+            alternative = {product.alternative}
             name = {product.name}
             description = {product.description}
             price = {product.price}
+            carbon = {product.carbon}
             addPurchases = {addPurchases}
           />
           })}

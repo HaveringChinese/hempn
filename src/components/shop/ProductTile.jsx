@@ -1,21 +1,15 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 
 function ProductTile(props){
-  
-  var [purchases, updatePurchases] = useState(0);
-
-  function purchase(){
-    updatePurchases(purchases + 1)
-  };
-  
-  useEffect(() => {props.addPurchases(purchases)}, )
 
   return (
     <div className="card">
+      <img id={props.id} src={props.source} alt={props.alternative}></img>
       <h1>{props.name}</h1>
       <p>{props.description}</p>
       <p>{props.price}</p>
-      <button onClick={purchase}>Purchase</button>
+      <p>{props.carbon}</p>
+      <button onClick={() => {props.addPurchases(props.carbon)}}>Purchase</button>
    
     </div>
   )

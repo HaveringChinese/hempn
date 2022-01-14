@@ -1,9 +1,10 @@
 import React from "react";
-import M from "materialize-css";
-import Wakefilde from "../images/wakefilde-on-a-green.jpg";
-import Balconies from "../images/bernard-hermant-balconies.jpg";
-import Backyard from "../images/zac-gudakov-backyard.jpg";
-import Indoor from "../images/kalei-peek-indoor.jpg";
+// import M from "materialize-css";
+import Calculator from "./Calculator";
+// import Wakefilde from "../images/wakefilde-on-a-green.jpg";
+// import Balconies from "../images/bernard-hermant-balconies.jpg";
+// import Backyard from "../images/zac-gudakov-backyard.jpg";
+// import Indoor from "../images/kalei-peek-indoor.jpg";
 
 function Grow(){
 
@@ -21,14 +22,14 @@ function Grow(){
 
 
   return(
-    <div>
+    <div className="grow">
 
         <div>
           <h1 className="red">To Boldly Grow Hemp</h1>
           <h1 className="deep-purple">Where No One Has Grown Before</h1>
         </div>
 
-    
+        <Calculator/>
         
     {/* <div class="grow-carousel carousel-slider center">
       <div class="carousel-fixed-item center">
