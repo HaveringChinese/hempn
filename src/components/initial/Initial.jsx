@@ -67,6 +67,22 @@ function Initial(props){
       }
     };
 
+    function assignColors(){
+      let lefty = document.getElementById("left-nav-button");
+      let righty = document.getElementById("right-nav-button");
+      if (document.querySelector(".buttons") && (image === 2 || image === 3)){
+       lefty.classList.add("dark-text");
+       righty.classList.add("dark-text");
+      } else if ((image === 0 || image === 1) && (lefty.classList.contains("dark-text") && (righty.classList.contains("dark-text")))){
+        lefty.classList.remove("dark-text");
+        righty.classList.remove("dark-text");
+      } else {
+        return null;
+      }
+    }
+    if (document.querySelector(".buttons")){
+    assignColors();
+    };
 
   return (
     <div className="initial">
@@ -84,8 +100,8 @@ function Initial(props){
       </div>
 
       <div className="buttons">
-        <button className="left-button" onClick={handlePageClick} name="shop">Purchase Hemp-based Products</button>
-        <button className="right-button" onClick={handlePageClick} name="grow">Start Growing, Start Earning</button>
+        <button  id="left-nav-button" className="nav-button" onClick={handlePageClick} name="shop">Purchase Hemp-based Products</button>
+        <button id="right-nav-button" className="nav-button" onClick={handlePageClick} name="grow">Start Growing, Start Earning</button>
       </div>
       
     </div>

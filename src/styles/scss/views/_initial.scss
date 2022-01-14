@@ -30,24 +30,14 @@
     left: 0%;
   }
 
-  .left-button {
-    margin: auto 50px auto auto;
+  .nav-button {
+    margin: auto 50px auto 50px;
     color: $accentColor;
 
     &:hover {
       box-shadow: inset 0 0 0 5px $accentColor;
     }
   }
-
-  .right-button {
-    margin: auto auto auto 50px;
-    color: $accentColor;
-
-    &:hover {
-      box-shadow: inset 0 0 0 5px $accentColor;
-    }
-  }
-}
 
 .carousel-buttons {
   @include p.flex(flex);
@@ -113,9 +103,17 @@
 
 .carousel-image {
   grid-column: 1/4;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  height: 100vh;
+  width: 100vw;
   z-index: 0;
+}
+
+.dark-text {
+  color: $foundationColor;
+
+  &:hover {
+    box-shadow: inset 0 0 0 5px $foundationColor;
+  }
+}
+
 }

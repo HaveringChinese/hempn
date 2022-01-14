@@ -33,6 +33,18 @@
     top: 25%;
     left: 50%;
     z-index: 1;
-    color: $textColor;
+    color: $foundationColor;
+    font-size: $headingSize;
+  }
+}
+
+.card-holder {
+  @include p.flex(flex);
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .card {
+    margin: 25px 25px;
+
   }
 }

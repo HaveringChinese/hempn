@@ -1,16 +1,18 @@
 import React, {useState} from "react";
 import ProductTile from "./ProductTile";
+import Products from "./Products";
 import SingleHemp from "../images/single-hemp.jpg";
 
 function Main(){
 
   const [input, setInput] = useState("");
   const [strategies, setStrategies] = useState([]);
+  const [cart, updateCart] = useState(0);
 
   function handleStrategies(event){
     const newInput = event.target.value;
     setInput(newInput);
-  }
+  };
 
   function handleSubmit(event){
     event.preventDefault();
@@ -18,7 +20,11 @@ function Main(){
       return [...prevStrat, input]
     });
     setInput("");
-  }
+  };
+
+  function addPurchases(purchases){
+    updateCart(cart + purchases);
+  };
 
   return (
     <div className="main">
@@ -37,13 +43,28 @@ function Main(){
     </div>
       
       <main>
-       
-      <ProductTile 
-      name = "hemp (raw)"
-      description = "Bulk industrial hemp."
-      price = "$.40/lb"
-      />
 
+        <div className="cart-container">
+
+          <h1 className="shopping-cart">
+            {cart}
+          </h1>
+
+        </div>
+
+        <div className="card-holder">
+          {/* generate product tiles based on inventory  */}
+          {/* {productTileGenerator(products)}  */}
+          {Products.map((product) => {
+            return <ProductTile
+            key = {product.key}
+            name = {product.name}
+            description = {product.description}
+            price = {product.price}
+            addPurchases = {addPurchases}
+          />
+          })}
+        </div>
       </main>
 
       <form onSubmit={handleSubmit}>

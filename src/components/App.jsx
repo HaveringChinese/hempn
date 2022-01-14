@@ -27,10 +27,7 @@ function App(){
       />
 
       {/* only loads on arrival */}
-      {page === "initial" && <Initial 
-      handlePageChange = {handlePageChange}      
-      />
-      }
+      {page === "initial" && <Initial handlePageChange = {handlePageChange}/>}
 
       {/* only loads if "shop" is clicked */}
       {page === "shop" && <Main />}

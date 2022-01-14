@@ -115,22 +115,14 @@ body {
   top: 25%;
   left: 0%;
 }
-.initial .left-button {
-  margin: auto 50px auto auto;
+.initial .nav-button {
+  margin: auto 50px auto 50px;
   color: #fffdf0;
 }
-.initial .left-button:hover {
+.initial .nav-button:hover {
   box-shadow: inset 0 0 0 5px #fffdf0;
 }
-.initial .right-button {
-  margin: auto auto auto 50px;
-  color: #fffdf0;
-}
-.initial .right-button:hover {
-  box-shadow: inset 0 0 0 5px #fffdf0;
-}
-
-.carousel-buttons {
+.initial .carousel-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -142,27 +134,26 @@ body {
   position: absolute;
   top: 10%;
 }
-.carousel-buttons .leftward-button {
+.initial .carousel-buttons .leftward-button {
   top: 10%;
   left: 15%;
   font-size: 3rem;
   background-color: transparent;
   border: none;
 }
-.carousel-buttons .leftward-button:hover {
+.initial .carousel-buttons .leftward-button:hover {
   color: white;
 }
-.carousel-buttons .rightward-button {
+.initial .carousel-buttons .rightward-button {
   top: 10%;
   right: 15%;
   font-size: 3rem;
   background-color: transparent;
   border: none;
 }
-.carousel-buttons .rightward-button:hover {
+.initial .carousel-buttons .rightward-button:hover {
   color: white;
 }
-
 @keyframes fadeAway {
   to {
     visibility: hidden;
@@ -170,7 +161,7 @@ body {
     height: 0;
   }
 }
-.greeting {
+.initial .greeting {
   position: absolute;
   top: 0%;
   right: 37%;
@@ -180,21 +171,24 @@ body {
   animation: fadeAway 0s ease-in 3s;
   animation-fill-mode: forwards;
 }
-.greeting p {
+.initial .greeting p {
   font-size: 1rem;
   color: white;
 }
-.greeting.hide {
+.initial .greeting.hide {
   display: none;
 }
-
-.carousel-image {
+.initial .carousel-image {
   grid-column: 1/4;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  height: 100vh;
+  width: 100vw;
   z-index: 0;
+}
+.initial .dark-text {
+  color: #333232;
+}
+.initial .dark-text:hover {
+  box-shadow: inset 0 0 0 5px #333232;
 }
 
 .grow-carousel {
@@ -235,7 +229,19 @@ body {
   top: 25%;
   left: 50%;
   z-index: 1;
-  color: white;
+  color: #333232;
+  font-size: 3rem;
+}
+
+.card-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card-holder .card {
+  margin: 25px 25px;
 }
 
 /*# sourceMappingURL=App.css.map */
