@@ -28,8 +28,6 @@ function Grow(){
           <h1 className="red">To Boldly Grow Hemp</h1>
           <h1 className="deep-purple">Where No One Has Grown Before</h1>
         </div>
-
-        <Calculator/>
         
     {/* <div class="grow-carousel carousel-slider center">
       <div class="carousel-fixed-item center">
@@ -56,6 +54,8 @@ function Grow(){
         <p class="white-text">This is your fourth panel</p>
       </div>
   </div> */}
+
+      <Calculator/>
 
     </div>
   )

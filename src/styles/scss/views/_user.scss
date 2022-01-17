@@ -1,0 +1,9 @@
+@use "../abstracts/" as a;
+
+.login-register {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: a.$foundationColor;
+  z-index: 5;
+}

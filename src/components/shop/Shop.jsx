@@ -3,7 +3,7 @@ import ProductTile from "./ProductTile";
 import Products from "./Products";
 import SingleHemp from "../images/single-hemp.jpg";
 
-function Main(){
+function Shop(){
 
   const [input, setInput] = useState("");
   const [strategies, setStrategies] = useState([]);
@@ -88,4 +88,4 @@ function Main(){
   )
 }
 
-export default Main;
+export default Shop;

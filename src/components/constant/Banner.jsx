@@ -26,7 +26,7 @@ function Banner(props){
       
       {props.button === "menu" && <button className="menu-button" onMouseEnter={handleEnter} onClick={handleClick}>三</button>}
       
-      {menuOpened === true && <Menu handlePageChange = {props.handlePageChange} handleExit = {handleExit}/>}
+      {menuOpened === true && <Menu handlePageChange = {props.handlePageChange} handleUser = {props.handleUser} handleExit = {handleExit}/>}
 
       <p className = {props.textClassName}>{props.text}{props.date === "date" && "© " + date + " Hempn. All Rights Reserved"}</p>
             

@@ -15,11 +15,11 @@ function Menu(props){
       case "grow":
         props.handlePageChange("grow");
       break;
-      case "register":
-        props.handlePageChange("register");
+      case "login-register":
+        props.handleUser();
         break;
-      case "login":
-        props.handlePageChange("login");
+      case "about":
+        props.handlePageChange("about");
         break;
       default:
         // code block
@@ -34,8 +34,8 @@ function Menu(props){
       <button name="home" onClick={handleClick}>Home</button>
       <button name="shop" onClick={handleClick}>Shop</button>
       <button name="grow" onClick={handleClick}>Grow</button>
-      <button name="register" onClick={handleClick}>Register</button>
-      <button name="login" onClick={handleClick}>Login</button>
+      <button name="login-register" onClick={handleClick}>Login / Register</button>
+      <button name="about" onClick={handleClick}>About</button>
       
     </div>
   )

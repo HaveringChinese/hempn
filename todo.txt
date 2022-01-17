@@ -1,0 +1,27 @@
+Initial:
+- caption block for each image
+- image transitions 
+- automatic image transitions
+
+Shop:
+- 18 demo products with distinct pictures and info
+- styled shopping cart
+- styled product tiles 
+
+Grow: 
+- image carousel of example living situations
+- styled growth calculator 
+- more fine-tuned growth calculator **<
+
+Login / Register:
+- reconfigure to display in front of any page **<
+- link login to constant banner
+- styled login screen
+
+Register:
+- persistent account creation (connect to host server w/ CRUD)
+- styled registration page
+
+About: 
+- add content and links
+- styled about page
