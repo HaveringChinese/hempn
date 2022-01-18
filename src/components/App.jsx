@@ -3,7 +3,7 @@ import Banner from "./constant/Banner";
 import Initial from "./initial/Initial.jsx";
 import Shop from "./shop/Shop";
 import Grow from "./grow/Grow";
-import Register from "./constant/Register";
+import User from "./constant/User";
 import About from "./constant/About";
 
 
@@ -43,7 +43,7 @@ function App(){
       {page === "grow" && <Grow />}
 
       {/* only loads if "login / register" is clicked */}
-      {userMenu === true && <Register />}
+      {userMenu === true && <User />}
 
       {/* only loads if "about" is clicked */}
       {page === "about" && <About />}

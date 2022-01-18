@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import Menu from "./Menu";
 
 
-const date = new Date().getFullYear();
 
 function Banner(props){
-
+  
+  const date = new Date().getFullYear();
   const [menuOpened, setMenuOpened]  = useState(false);
 
 
@@ -22,7 +22,7 @@ function Banner(props){
   }
 
   return (
-    <div className={props.className}>
+    <div className={props.className} onMouseLeave={props.className === "header-banner" && menuOpened ? handleExit: null}>
       
       {props.button === "menu" && <button className="menu-button" onMouseEnter={handleEnter} onClick={handleClick}>三</button>}
       

@@ -84,7 +84,10 @@ function Initial(props){
     assignColors();
     };
 
-    setTimeout(cycleRight, 5000);
+       setTimeout(cycleRight, 10000);
+ 
+    
+
 
   return (
     <div className="initial">
