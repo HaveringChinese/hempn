@@ -1,7 +1,7 @@
 Initial:
 - caption block for each image
-- image transitions 
-- automatic image transitions
+- image transitions ...............................
+- automatic image transitions .....................
 
 Shop:
 - 18 demo products with distinct pictures and info
@@ -9,12 +9,12 @@ Shop:
 - styled product tiles 
 
 Grow: 
-- image carousel of example living situations
+- image carousel of example living situations .......
 - styled growth calculator 
-- more fine-tuned growth calculator **<
+- more fine-tuned growth calculator .................
 
 Login / Register:
-- reconfigure to display in front of any page **<
+- reconfigure to display in front of any page ..........
 - link login to constant banner
 - styled login screen
 

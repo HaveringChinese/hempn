@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import Flower from "../images/david-gabric-flower.jpg";
-import ColorfulHemp from "../images/kym-mackinnon-colorful-hemp.jpg";
+// import Flower from "../images/david-gabric-flower.jpg";
+// import ColorfulHemp from "../images/kym-mackinnon-colorful-hemp.jpg";
 
 function Register(){
 

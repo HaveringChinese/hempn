@@ -30,11 +30,11 @@ function Shop(){
   
 
   return (
-    <div className="main">
+    <div className="shop">
       
-      <div className="main-header">
-        <img src={SingleHemp} className="main-header-image" alt="single hemp plant"></img>
-        <div className="main-header-text">
+      <div className="shop-header">
+        <img src={SingleHemp} className="shop-header-image" alt="single hemp plant"></img>
+        <div className="shop-header-text">
           <p>Our 5 Year Mission: To Boldly Grow Hemp Where No One Has Grown Before</p>
           <ul>
             <li>Maximum Profits For Growers</li>
@@ -75,7 +75,7 @@ function Shop(){
       </main>
 
       <form onSubmit={handleSubmit}>
-      <h1>What are some things you are doing to mitigate climate change?</h1>
+      <p>What are some things you are doing to mitigate climate change?</p>
       <input name="mitigation-strategies" value={input} onChange={handleStrategies} placeholder="E.g. I buy more unpackaged whole foods."></input>
       </form>
       <ul>

@@ -9,6 +9,7 @@
     "materialize-css": "^1.0.0-rc.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-materialize": "^3.10.0",
     "sass": "^1.45.2",
     "web-vitals": "^1.1.2",
     "webpack": "^4.44.2"
@@ -21,7 +22,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sass" : "sass src/styles/scss:src/styles/css --watch"
+    "sass": "sass src/styles/scss:src/styles/css --watch",
+    "msass": "node_modules/materialize-css/sass:src/styles/css"
   },
   "eslintConfig": {
     "extends": [
