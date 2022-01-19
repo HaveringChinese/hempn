@@ -10,16 +10,10 @@ import About from "./constant/About";
 function App(){
 
   const [page, setPage] = useState('initial');
-  const [userMenu, displayUserMenu] = useState(false);
 
   function handlePageChange(newPage){
     return setPage(newPage);
   };
-
-  function handleUser(){
-    console.log(!displayUserMenu);
-    return displayUserMenu(!userMenu);
-  }
   
   return (
     <div className="App">
@@ -30,7 +24,6 @@ function App(){
       text = "Hempn"
       button = "menu"
       handlePageChange = {handlePageChange}
-      handleUser = {handleUser}
       />
 
       {/* only loads on arrival or when "home" is clicked */}
@@ -43,7 +36,7 @@ function App(){
       {page === "grow" && <Grow />}
 
       {/* only loads if "login / register" is clicked */}
-      {userMenu === true && <User />}
+      {page === "user" && <User />}
 
       {/* only loads if "about" is clicked */}
       {page === "about" && <About />}

@@ -8,18 +8,23 @@ function Menu(props){
     switch(event.target.name) {
       case "home":
         props.handlePageChange("initial");
+        props.handleExit();
         break;
       case "shop":
         props.handlePageChange("shop");
+        props.handleExit();
       break;
       case "grow":
         props.handlePageChange("grow");
+        props.handleExit();
       break;
       case "login-register":
-        props.handleUser();
+        props.handlePageChange("user");
+        props.handleExit();
         break;
       case "about":
         props.handlePageChange("about");
+        props.handleExit();
         break;
       default:
         // code block
