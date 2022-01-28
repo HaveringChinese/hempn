@@ -16,8 +16,20 @@
   align-content: center;
 }
 
-@mixin primaryButton {
+@mixin primaryButton($primary, $secondary) {
   width: 100%;
   height: fit-content;
   font-size: 2rem;
+  background-color: $secondary;
+  border: solid $primary 2px;
+  color: $secondary;
+}
+
+@mixin secondaryButton($color) {
+  width: 100%;
+  height: fit-content;
+  margin: 5px;
+  font-size: 2rem;
+  border: solid $color 2px;
+
 }

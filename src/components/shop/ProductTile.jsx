@@ -3,7 +3,7 @@ import React from "react";
 function ProductTile(props){
 
   return (
-    <div className="card">
+    <div className="product-tile">
       <img id={props.id} src={props.source} alt={props.alternative}></img>
       <h1>{props.name}</h1>
       <p>{props.description}</p>

@@ -55,7 +55,7 @@ function Shop(){
 
         </div>
 
-        <div className="card-holder">
+        <div className="product-tile-holder">
           {/* generate product tiles based on inventory  */}
           {/* {productTileGenerator(products)}  */}
           {Products.map((product) => {

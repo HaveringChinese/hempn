@@ -42,16 +42,26 @@
   font-size: $bodySize;
 }
 
-.card-holder {
+.product-tile-holder {
   @include p.flex(flex);
   flex-direction: row;
   flex-wrap: wrap;
 
-  .card {
+  .product-tile {
     margin: 25px 25px;
+    border: solid $foundationColor 2px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 
     & h1 {
     font-size: 1rem;
     }
+
+    & button {
+      @include p.primaryButton(black, white);
+    }
+
   }
 }

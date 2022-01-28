@@ -39,3 +39,20 @@
   grid-column: 3/9;
   grid-row: 3/4;
 }
+
+.growth-calculator {
+  margin: 5px;
+
+  button {
+    @include p.secondaryButton($foundationColor); 
+    background-color: $foundationColor;
+    color: $textColor;
+    font-size: $bodySize;
+  }
+
+  :hover {
+    background-color: $textColor;
+    color: $foundationColor;
+  }
+
+}
