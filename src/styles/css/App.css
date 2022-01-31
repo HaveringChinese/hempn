@@ -259,40 +259,37 @@ body {
 }
 
 .shop {
-  margin: 0 0;
-  position: relative;
-  top: 100px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(3, 100vh);
+  padding: 10%;
 }
-.shop main {
-  grid-column: 2/11;
-  grid-row: 2;
+.shop .shop-main {
+  padding: 100px 25px 100px 25px;
+  position: relative;
 }
 
-.shop-header {
-  position: relative;
-  grid-column: 1/13;
-  grid-row: 1;
-}
 .shop-header .shop-header-image {
-  position: absolute;
-  width: 50vw;
-  height: 50vh;
   z-index: 0;
 }
 .shop-header .shop-header-text {
-  position: absolute;
-  top: 25%;
-  left: 50%;
   z-index: 1;
   color: #333232;
   font-size: 1.5rem;
 }
 
+.cart-container {
+  position: fixed;
+  top: 10%;
+  right: 0%;
+  background-color: #333232;
+  padding: 5px 20px 20px 20px;
+}
+
 .shopping-cart {
   font-size: 1.5rem;
+  color: white;
+}
+
+.user-sustainable-practices {
+  color: white;
 }
 
 .product-tile-holder {
@@ -325,6 +322,64 @@ body {
   color: #333232;
   background-color: white;
   cursor: pointer;
+}
+
+.gg-shopping-cart {
+  display: block;
+  color: white;
+  box-sizing: border-box;
+  position: relative;
+  transform: scale(var(--ggs, 1.5));
+  width: 20px;
+  height: 21px;
+  background: linear-gradient(to left, currentColor 12px, transparent 0) no-repeat -1px 6px/18px 2px, linear-gradient(to left, currentColor 12px, transparent 0) no-repeat 6px 14px/11px 2px, linear-gradient(to left, currentColor 12px, transparent 0) no-repeat 0 2px/4px 2px, radial-gradient(circle, currentColor 60%, transparent 40%) no-repeat 12px 17px/4px 4px, radial-gradient(circle, currentColor 60%, transparent 40%) no-repeat 6px 17px/4px 4px;
+}
+
+.gg-shopping-cart::after,
+.gg-shopping-cart::before {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  width: 2px;
+  height: 14px;
+  background: currentColor;
+  top: 2px;
+  left: 4px;
+  transform: skew(12deg);
+}
+
+.gg-shopping-cart::after {
+  height: 10px;
+  top: 6px;
+  left: 16px;
+  transform: skew(-12deg);
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+    color: white;
+  }
+  80% {
+    transform: rotate(0deg);
+    color: white;
+  }
+  85% {
+    transform: rotate(5deg);
+    color: #397a4a;
+  }
+  95% {
+    transform: rotate(-5deg);
+    color: #397a4a;
+  }
+  100% {
+    transform: rotate(0deg);
+    color: white;
+  }
+}
+.wiggly {
+  animation: wiggle 2.5s infinite;
 }
 
 .login-register {

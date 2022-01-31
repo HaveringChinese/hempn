@@ -13,9 +13,13 @@ function About(){
         </div>
         <div className="mission">
           <img src="https://www.fillmurray.com/640/360" alt="" className="mission-image" />
-          <p className="mission-statement">
-          A diam maecenas sed enim ut sem viverra aliquet. Tellus in hac habitasse platea dictumst vestibulum rhoncus est. Congue eu consequat ac felis donec et odio pellentesque diam. Augue neque gravida in fermentum et sollicitudin ac orci. Consequat nisl vel pretium lectus. Elementum pulvinar etiam non quam lacus. Amet consectetur adipiscing elit ut. Enim facilisis gravida neque convallis. Lobortis scelerisque fermentum dui faucibus in ornare quam viverra. Venenatis a condimentum vitae sapien pellentesque habitant.
-          </p>
+          <p className="mission-statement">Our 5 Year Mission: To Boldly Grow Hemp Where No One Has Grown Before</p>
+          <ul>
+            <li>Maximum Profits For Growers</li>
+            <li>Minimum Hassle For Busy People</li>
+            <li>Maximum Air Purification and Carbon Sequestration</li>
+            <li>Maximum Material Repurposing</li>
+          </ul>
         </div>
         <div className="strategy">
           <img src="https://www.fillmurray.com/640/360" alt="" className="strategy-image" />
