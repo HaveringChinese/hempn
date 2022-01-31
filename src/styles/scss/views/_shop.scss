@@ -60,7 +60,7 @@
     }
 
     & button {
-      @include p.primaryButton(black, white);
+      @include p.primaryButton($textColor, $foundationColor);
     }
 
   }

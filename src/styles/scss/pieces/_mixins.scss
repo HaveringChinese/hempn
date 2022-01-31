@@ -22,7 +22,14 @@
   font-size: 2rem;
   background-color: $secondary;
   border: solid $primary 2px;
-  color: $secondary;
+  color: $primary;
+
+  &:hover {
+    color: $secondary;
+    background-color: $primary;
+    cursor: pointer;
+  }
+
 }
 
 @mixin secondaryButton($color) {

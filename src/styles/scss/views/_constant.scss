@@ -56,16 +56,8 @@ body {
     }
   
     button {
-      @include p.primaryButton;
-      background-color: $foundationColor;
+      @include p.primaryButton($textColor, $foundationColor);
       border: solid $textColor 2px;
-      color: $textColor;
-
-      &:hover {
-        background-color: $textColor;
-        color: $foundationColor;
-        cursor: pointer;
-      }
   }
 }
 
