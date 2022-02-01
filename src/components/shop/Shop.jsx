@@ -46,7 +46,7 @@ function Shop(){
           <h1 className="shopping-cart">
             Your {cart} purchases will sequester <br></br>{sequestered} pounds of Carbon Dioxide (CO2). <br></br>Congrats!
           </h1>
-          <i class="gg-shopping-cart wiggly"></i>
+          <i className="fas fa-shopping-cart fa-2x wiggly"></i>
           <ul className="user-sustainable-practices">
           {strategies.length > 1 && strategies.length < 5 && strategies.map((strat) => {
             return <li>{strat}</li>
