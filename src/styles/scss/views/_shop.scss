@@ -1,7 +1,6 @@
 @use "../pieces/" as p;
 @use "../abstracts/" as *;
 
-
 .shop {
   padding: 10%;
 
@@ -12,11 +11,9 @@
 }
 
 .shop-header {
-
-
   .shop-header-image {
     z-index: 0;
-   }
+  }
 
   .shop-header-text {
     z-index: 1;
@@ -34,7 +31,6 @@
 }
 
 .cart-label {
-
   .label-text {
     font-size: $bodySize;
     color: $textColor;
@@ -47,17 +43,17 @@
 
 .cart-icon {
   position: relative;
+  color: $textColor;
 }
 
 .cart-count {
   margin: 0;
   position: absolute;
-  bottom: 60%;
+  bottom: 70%;
   left: 10.5%;
-  color: $textColor;
-  font-size: 1.5rem;
+  color: $templateGreen;
+  font-size: 1rem;
 }
-
 
 .user-sustainable-practices {
   color: $textColor;
@@ -71,31 +67,55 @@
 
   .product-tile {
     margin: 25px 25px;
-    border: solid $foundationColor 2px;
+    border: 12px double $foundationColor;
     padding: 10px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     align-content: center;
+    max-width: 30vw;
 
     & h1 {
-    font-size: 1rem;
+      font-size: 2rem;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
 
     & button {
       @include p.primaryButton($textColor, $foundationColor);
     }
 
+    & img {
+
+      max-width: 400px;
+    }
+
   }
 }
 
+
 @keyframes wiggle {
-  0% { transform: rotate(0deg); color: $textColor;}
- 80% { transform: rotate(0deg); color: $textColor;}
- 85% { transform: rotate(5deg); color: $templateGreen;}
- 95% { transform: rotate(-5deg); color: $templateGreen;}
-100% { transform: rotate(0deg); color: $textColor;}
+  0% {
+    transform: rotate(0deg);
+    color: $textColor;
+  }
+  25% {
+    transform: rotate(5deg);
+    color: $templateGreen;
+  }
+  50% {
+    transform: rotate(-5deg);
+    color: $templateGreen;
+  }
+  75% {
+    transform: rotate(5deg);
+    color: $templateGreen;
+  }
+  100% {
+    transform: rotate(0deg);
+    color: $textColor;
+  }
 }
 
-.wiggly {
-  animation: wiggle 2.5s infinite;
+.wiggle {
+  animation: wiggle 0.4s 1;
 }

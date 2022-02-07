@@ -14,14 +14,16 @@ import Toiletry from "../images/Toiletry-Bag.jpg";
 const Products = [
   {
   key: 1,
-  name: "hemp (raw)",
-  description: "Bulk industrial hemp.",
+  id: "hemp",
+  name: "Hemp (Raw)",
+  description: "Just plain ole bulk industrial hemp. Get creative!",
   price: "$.40/lb",
   carbon: 0.15,
   source: Mask
   },
   {
   key: 2,
+  id: "chew",
   name: "Hemp Chew Toy",
   description: "Now your doggos can help fight climate change by chewing on all-natural, biodegradable hemp chew toys. Chow down!",
   price: "$7.99",
@@ -30,6 +32,7 @@ const Products = [
   },
   {
   key: 3,
+  id: "beanie",
   name: "European Slouch Beanie",
   description: "This cozy beanie will be warming you, not the planet.",
   price: "$15.99",
@@ -38,6 +41,7 @@ const Products = [
   },
   {
   key: 4,
+  id: "tote",
   name: "Hemp Tote Bag",
   description: "This tote not only has itself sequestered greenhouse gases, but will also help you avoid using petroleum-based or other single-use shopping bags.",
   price: "$4.99",
@@ -46,6 +50,7 @@ const Products = [
   },
   {
   key: 5,
+  id: "tee",
   name: "Hemp T-Shirt",
   description: "Now you can obnoxiously signal that you care about Mother Earth enough to spend slightly more on a 100% hemp, carbon-negative T-shirt. Not all heroes wear capes. Some wear tees.",
   price: "$24.99",
@@ -54,6 +59,7 @@ const Products = [
   },
   {
   key: 6,
+  id: "journal",
   name: "Carbon-Negative Journal",
   description: "We can't fight climate change with a sword, no matter how sharp. This journal can be used to vent your frustration at carbon-intensive industrialists. The pen is mightier!",
   price: "$17.99",
@@ -62,6 +68,7 @@ const Products = [
   }, 
   {
   key: 7,
+  id: "towels",
   name: "Hemp Towels",
   description: "These towels will keep you dry, while helping to keep coastal-dwelling loved ones on dry land.",
   price: "$28.99",
@@ -70,6 +77,7 @@ const Products = [
   },
   {
   key: 8,
+  id: "tp",
   name: "100% Hemp-based Toilet Paper",
   description: "Gentle on your rump, gentler on our environment.",
   price: "$4.99 / package",
@@ -78,6 +86,7 @@ const Products = [
   },
   {
   key: 9,
+  id: "rope",
   name: "Hemp Rope",
   description: "For tying together arks to survive glacial melt floods. And other less grown up things.",
   price: "$1.50",
@@ -86,6 +95,7 @@ const Products = [
   },
   {
   key: 10,
+  id: "wallet",
   name: "Hemp Wallet",
   description: "The first wallet that is 100% green, inside and out.",
   price: "$34.99",
@@ -94,6 +104,7 @@ const Products = [
   },
   {
     key: 11,
+    id: "toiletry",
     name: "Hemp Toiletry Bag",
     description: "They'll make just about anything out of hemp these days. Isn't it awesome?",
     price: "$37.99",

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ProductTile from "./ProductTile";
 import Products from "./Products";
 import SingleHemp from "../images/single-hemp.jpg";
+import { elementOrParentIsFixed } from "materialize-css";
 
 function Shop() {
   const [input, setInput] = useState("");
@@ -24,14 +25,21 @@ function Shop() {
     setInput("");
   }
 
+  
   function addPurchases(carbon) {
     updateCart(cart + 1);
     updateSequestered(sequestered + carbon);
+    wiggle();
   }
 
   function wiggle(){
-
-    
+    var wigglyCart = document.getElementById("wigglyCart");
+    wigglyCart.classList.remove("wiggle");
+    // if (wigglyCart.classList.contains("wiggle")){
+    //   wigglyCart.classList.remove("wiggle");
+    // }
+    void wigglyCart.offsetWidth; 
+    wigglyCart.classList.add("wiggle");
   }
 
   return (
@@ -51,7 +59,7 @@ function Shop() {
             </h1>
           </div>
           <div className="shopping-cart">
-            <i className="fas fa-shopping-cart cart-icon fa-2x wiggly"></i>
+            <i id="wigglyCart" className="fas fa-shopping-cart cart-icon fa-2x"></i>
             <p className="cart-count">{cart}</p>
           </div>
           <div className="strategies">

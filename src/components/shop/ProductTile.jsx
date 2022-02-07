@@ -7,8 +7,8 @@ function ProductTile(props){
       <img id={props.id} src={props.source} alt={props.alternative}></img>
       <h1>{props.name}</h1>
       <p>{props.description}</p>
-      <p>{props.price}</p>
-      <p>{props.carbon}</p>
+      <p>Price: {props.price}</p>
+      <p>Carbon sequestered per item: {props.carbon} pounds.</p>
       <button onClick={() => {props.addPurchases(props.carbon)}}>Purchase</button>
    
     </div>

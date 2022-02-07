@@ -1,3 +1,4 @@
+@use "../abstracts/" as *;
 
 @mixin banner($position) {
   position: $position;
@@ -25,8 +26,9 @@
   color: $primary;
 
   &:hover {
-    color: $secondary;
-    background-color: $primary;
+    color: $templateGreen;
+    background-color: $secondary;
+    border: solid $secondary 2px;
     cursor: pointer;
   }
 

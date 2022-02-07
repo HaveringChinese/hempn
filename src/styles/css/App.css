@@ -65,8 +65,9 @@ body {
   border: solid white 2px;
 }
 .menu button:hover {
-  color: #333232;
-  background-color: white;
+  color: #397a4a;
+  background-color: #333232;
+  border: solid #333232 2px;
   cursor: pointer;
 }
 
@@ -294,15 +295,16 @@ body {
 
 .cart-icon {
   position: relative;
+  color: white;
 }
 
 .cart-count {
   margin: 0;
   position: absolute;
-  bottom: 60%;
+  bottom: 70%;
   left: 10.5%;
-  color: white;
-  font-size: 1.5rem;
+  color: #397a4a;
+  font-size: 1rem;
 }
 
 .user-sustainable-practices {
@@ -319,14 +321,17 @@ body {
 }
 .product-tile-holder .product-tile {
   margin: 25px 25px;
-  border: solid #333232 2px;
+  border: 12px double #333232;
   padding: 10px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   align-content: center;
+  max-width: 30vw;
 }
 .product-tile-holder .product-tile h1 {
-  font-size: 1rem;
+  font-size: 2rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 .product-tile-holder .product-tile button {
   width: 100%;
@@ -337,9 +342,13 @@ body {
   color: white;
 }
 .product-tile-holder .product-tile button:hover {
-  color: #333232;
-  background-color: white;
+  color: #397a4a;
+  background-color: #333232;
+  border: solid #333232 2px;
   cursor: pointer;
+}
+.product-tile-holder .product-tile img {
+  max-width: 400px;
 }
 
 @keyframes wiggle {
@@ -347,16 +356,16 @@ body {
     transform: rotate(0deg);
     color: white;
   }
-  80% {
-    transform: rotate(0deg);
-    color: white;
-  }
-  85% {
+  25% {
     transform: rotate(5deg);
     color: #397a4a;
   }
-  95% {
+  50% {
     transform: rotate(-5deg);
+    color: #397a4a;
+  }
+  75% {
+    transform: rotate(5deg);
     color: #397a4a;
   }
   100% {
@@ -364,8 +373,8 @@ body {
     color: white;
   }
 }
-.wiggly {
-  animation: wiggle 2.5s infinite;
+.wiggle {
+  animation: wiggle 0.4s 1;
 }
 
 .login-register {
