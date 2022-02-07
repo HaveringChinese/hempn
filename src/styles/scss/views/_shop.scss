@@ -27,16 +27,37 @@
 
 .cart-container {
   position: fixed;
-  top: 10%;
+  top: 100px;
   right: 0%;
   background-color: $foundationColor;
   padding: 5px 20px 20px 20px;
 }
 
-.shopping-cart {
-  font-size: $bodySize;
-  color: $textColor;
+.cart-label {
+
+  .label-text {
+    font-size: $bodySize;
+    color: $textColor;
+  }
 }
+
+.shopping-cart {
+  position: relative;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-count {
+  margin: 0;
+  position: absolute;
+  bottom: 60%;
+  left: 10.5%;
+  color: $textColor;
+  font-size: 1.5rem;
+}
+
 
 .user-sustainable-practices {
   color: $textColor;
@@ -46,6 +67,7 @@
   @include p.flex(flex);
   flex-direction: row;
   flex-wrap: wrap;
+  overflow: hidden;
 
   .product-tile {
     margin: 25px 25px;

@@ -277,15 +277,32 @@ body {
 
 .cart-container {
   position: fixed;
-  top: 10%;
+  top: 100px;
   right: 0%;
   background-color: #333232;
   padding: 5px 20px 20px 20px;
 }
 
-.shopping-cart {
+.cart-label .label-text {
   font-size: 1.5rem;
   color: white;
+}
+
+.shopping-cart {
+  position: relative;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-count {
+  margin: 0;
+  position: absolute;
+  bottom: 60%;
+  left: 10.5%;
+  color: white;
+  font-size: 1.5rem;
 }
 
 .user-sustainable-practices {
@@ -298,6 +315,7 @@ body {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 .product-tile-holder .product-tile {
   margin: 25px 25px;
