@@ -26,8 +26,8 @@
   color: $primary;
 
   &:hover {
-    color: $templateGreen;
-    background-color: $secondary;
+    color: $secondary;
+    background-color: $primary;
     border: solid $secondary 2px;
     cursor: pointer;
   }

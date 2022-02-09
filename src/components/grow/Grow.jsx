@@ -13,10 +13,10 @@ function Grow(){
   return (
     <div className="grow">
 
-        <div className="grow-header">
+        {/* <div className="grow-header">
           <h1 className="red">To Boldly Grow Hemp</h1>
           <h1 className="deep-purple">Where No One Has Grown Before</h1>
-        </div>
+        </div> */}
 
     <div className="carousel-container">
         <Carousel 
@@ -28,7 +28,7 @@ function Grow(){
           Indoor
         ]}
         options={{
-          fullWidth: false,
+          fullWidth: true,
           indicators: true,
           centerImages: false
         }}

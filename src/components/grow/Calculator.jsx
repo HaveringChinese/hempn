@@ -78,10 +78,10 @@ return (
               event.preventDefault();
               let eventInteger = event.target.name;
               return select(eventInteger)}}>
-              <button value="1" name={1}>{questionSet.option1}</button>
-              <button value="2" name={2}>{questionSet.option2}</button>
-              <button value="3" name={3}>{questionSet.option3}</button>
-              <button value="4" name={4}>{questionSet.option4}</button>
+              <button type="button" value="1" name={1}>{questionSet.option1}</button>
+              <button type="button" value="2" name={2}>{questionSet.option2}</button>
+              <button type="button" value="3" name={3}>{questionSet.option3}</button>
+              <button type="button" value="4" name={4}>{questionSet.option4}</button>
             </form>
           </div>}
   </div>

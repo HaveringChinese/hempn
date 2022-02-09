@@ -56,3 +56,12 @@
   }
 
 }
+
+.growth-capacity-display {
+  max-width: 75vw;
+  max-height: 50vh;  
+
+  & h1 {
+    font-size: 2rem;
+  }
+}

@@ -4,8 +4,8 @@ Initial:
 - automatic image transitions .....................
 
 Shop:
-- 18 demo products with distinct pictures and info
-- styled shopping cart
+- 18 demo products with distinct pictures and info ...
+- styled shopping cart ...............................
 - styled product tiles 
 
 Grow: 
