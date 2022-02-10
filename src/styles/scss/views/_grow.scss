@@ -4,10 +4,11 @@
 
 .grow {
   position: relative;
+  padding-top: 100px;
   max-width: 100vw;
   min-height: 100vh;
   display: grid;
-  grid: repeat(5, 1fr) / repeat(12, 1fr);
+  grid: repeat(1, 1fr) / repeat(12, 1fr);
 
   .grow-header {
     grid-column: 3/9;
@@ -36,8 +37,8 @@
 }
 
 .calculator-container {
-  grid-column: 3/9;
-  grid-row: 3/4;
+  grid-column: 4/10;
+  grid-row: 1/2;
 }
 
 .growth-calculator {
@@ -53,8 +54,17 @@
   :hover {
     background-color: $textColor;
     color: $foundationColor;
+    cursor: pointer;
   }
 
+  & h3 {
+    font-size: 2rem;
+  }
+
+}
+
+.questions {
+  font-size: 3rem;
 }
 
 .growth-capacity-display {

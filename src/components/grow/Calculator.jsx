@@ -63,7 +63,6 @@ function Calculator(){
 
 return (
   <div className="calculator-container">
-      <h1>{choices}</h1>
 
       {counter === QuestionTree.length && <div className="growth-capacity-display">
         <h1>Based on your answers, you could likely grow at least {capacity.toLocaleString()} pounds of hemp each year.</h1> 
@@ -72,7 +71,7 @@ return (
       </div>} 
 
       {counter < QuestionTree.length && <div className="growth-calculator">
-            <h1>{questionSet.question}</h1>
+            <h1 className="questions">{questionSet.question}</h1>
             <h3>Please Choose One</h3>
             <form id="growth-calculator" onClick={(event) => {
               event.preventDefault();

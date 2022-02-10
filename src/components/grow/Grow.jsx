@@ -18,7 +18,7 @@ function Grow(){
           <h1 className="deep-purple">Where No One Has Grown Before</h1>
         </div> */}
 
-    <div className="carousel-container">
+    {/* <div className="carousel-container">
         <Carousel 
         carouselId="grow-carousel"
         images={[
@@ -37,7 +37,7 @@ function Grow(){
         </div>}
 
         />
-      </div>
+      </div> */}
 
       <Calculator/>
 
