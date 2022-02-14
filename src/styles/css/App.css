@@ -277,7 +277,7 @@ body {
 }
 
 .shop {
-  padding: 10%;
+  padding: 5%;
 }
 .shop .shop-main {
   padding: 100px 25px 100px 25px;
@@ -365,6 +365,7 @@ body {
   cursor: pointer;
 }
 .product-tile-holder .product-tile img {
+  overflow: hidden;
   max-width: 400px;
 }
 
@@ -394,6 +395,93 @@ body {
   animation: wiggle 0.4s 1;
 }
 
+@media only screen and (max-width: 760px) {
+  .shop {
+    padding: 200px 0;
+  }
+  .shop .shop-main {
+    padding: 0;
+    position: relative;
+  }
+
+  .cart-container {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    top: 100px;
+    right: 12%;
+    background-color: #333232;
+    padding: 5px 10px;
+  }
+
+  .cart-label .label-text {
+    margin: 0 0;
+    font-size: 1rem;
+    color: white;
+  }
+
+  .shopping-cart {
+    position: relative;
+    padding: 10px;
+  }
+
+  .cart-icon {
+    position: relative;
+    top: 5%;
+    color: white;
+  }
+
+  .cart-count {
+    margin: 0;
+    position: relative;
+    bottom: 85%;
+    left: 100%;
+    color: white;
+    font-size: 1rem;
+  }
+
+  .product-tile-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: 100vw;
+  }
+  .product-tile-holder .product-tile {
+    margin: 10px 10px;
+    border: 12px double #333232;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    max-width: 75%;
+  }
+  .product-tile-holder .product-tile h1 {
+    font-size: 2rem;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+  .product-tile-holder .product-tile button {
+    width: 100%;
+    height: fit-content;
+    font-size: 2rem;
+    background-color: #333232;
+    border: solid white 2px;
+    color: white;
+  }
+  .product-tile-holder .product-tile button:hover {
+    color: #333232;
+    background-color: white;
+    border: solid #333232 2px;
+    cursor: pointer;
+  }
+  .product-tile-holder .product-tile img {
+    overflow: hidden;
+    max-width: 60vw;
+  }
+}
 .login-register {
   position: absolute;
   top: 50%;

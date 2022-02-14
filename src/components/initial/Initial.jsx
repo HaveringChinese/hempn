@@ -52,11 +52,12 @@ function Initial(props){
    }, [props, pageClicked]);
 
   function cycleLeft(){
-      if (image > 0){
-        setImage(image - 1)
-      } else {
-        setImage(3)
-      }
+    if (image > 0){
+      setImage(image - 1)
+    } else {
+      setImage(3)
+    }
+    clearInterval(cycleInterval)
     };
 
     function cycleRight(){
@@ -65,6 +66,7 @@ function Initial(props){
       } else {
         setImage(0)
       }
+      clearInterval(cycleInterval)
     };
 
     function assignColors(){
@@ -80,13 +82,17 @@ function Initial(props){
         return null;
       }
     }
+    
+    var cycleInterval;
+
+    function cycleImages(){
+      cycleInterval = setInterval(cycleRight, 10000);
+    };
+    
     if (document.querySelector(".buttons")){
     assignColors();
+    cycleImages();
     };
-
-       setTimeout(cycleRight, 10000);
- 
-    
 
 
   return (

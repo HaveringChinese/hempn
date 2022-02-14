@@ -43,14 +43,14 @@ function Shop() {
   }
 
   function scroll(){
-    var element = document.getElementById("toiletry");
+    var element = document.getElementById("tote");
     element.scrollIntoView({behavior: 'smooth'});
   }
 
   return (
     <div className="shop">
       <div className="shop-header">
-        <button onClick={scroll}>Scroll</button>
+        {/* <button onClick={scroll}>Scroll</button> */}
         {/* <img src={SingleHemp} className="shop-header-image" alt="single hemp plant"></img> */}
         <div className="shop-header-text"></div>
       </div>

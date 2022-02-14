@@ -2,7 +2,7 @@
 @use "../abstracts/" as *;
 
 .shop {
-  padding: 10%;
+  padding: 5%;
 
   .shop-main {
     padding: 100px 25px 100px 25px;
@@ -85,7 +85,7 @@
     }
 
     & img {
-
+      overflow: hidden;
       max-width: 400px;
     }
 
@@ -118,4 +118,90 @@
 
 .wiggle {
   animation: wiggle 0.4s 1;
+}
+
+
+@media only screen and (max-width: 760px) {
+  
+  .shop {
+    padding: 200px 0;
+  
+    .shop-main {
+      padding: 0;
+      position: relative;
+    }
+  }
+
+.cart-container {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  top: 100px;
+  right: 12%;
+  background-color: $foundationColor;
+  padding: 5px 10px;
+}
+
+.cart-label {
+  .label-text {
+    margin: 0 0;
+    font-size: 1rem;
+    color: $textColor;
+  }
+}
+
+.shopping-cart {
+  position: relative;
+  padding: 10px;
+}
+
+.cart-icon {
+  position: relative;
+  top: 5%;
+  color: $textColor;
+}
+
+.cart-count {
+  margin: 0;
+  position: relative;
+  bottom: 85%;
+  left: 100%;
+  color: $textColor;
+  font-size: 1rem;
+}
+
+  .product-tile-holder {
+    @include p.flex(flex);
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: 100vw;
+  
+    .product-tile {
+      margin: 10px 10px;
+      border: 12px double $foundationColor;
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      max-width: 75%;
+  
+      & h1 {
+        font-size: 2rem;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+  
+      & button {
+        @include p.primaryButton($textColor, $foundationColor);
+      }
+  
+      & img {
+        overflow: hidden;
+        max-width: 60vw;
+      }
+  
+    }
+  }
+
 }
