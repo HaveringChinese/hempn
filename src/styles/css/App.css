@@ -490,4 +490,35 @@ body {
   z-index: 5;
 }
 
+.about {
+  padding: 100px 50px;
+}
+.about button {
+  width: 100%;
+  height: fit-content;
+  font-size: 2rem;
+  background-color: #333232;
+  border: solid white 2px;
+  color: white;
+  width: min-content;
+  font-size: 1rem;
+}
+.about button:hover {
+  color: #333232;
+  background-color: white;
+  border: solid #333232 2px;
+  cursor: pointer;
+}
+
+.about-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-img {
+  width: 50vw;
+}
+
 /*# sourceMappingURL=App.css.map */

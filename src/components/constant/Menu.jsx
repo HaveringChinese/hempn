@@ -1,11 +1,8 @@
 import React from "react";
 
-
-function Menu(props){
-
-
-  function handleClick(event){
-    switch(event.target.name) {
+function Menu(props) {
+  function handleClick(event) {
+    switch (event.target.name) {
       case "home":
         props.handlePageChange("initial");
         props.handleExit();
@@ -13,11 +10,11 @@ function Menu(props){
       case "shop":
         props.handlePageChange("shop");
         props.handleExit();
-      break;
+        break;
       case "grow":
         props.handlePageChange("grow");
         props.handleExit();
-      break;
+        break;
       case "login-register":
         props.handlePageChange("user");
         props.handleExit();
@@ -27,7 +24,7 @@ function Menu(props){
         props.handleExit();
         break;
       default:
-        // code block
+      // code block
     }
   }
 
@@ -36,15 +33,23 @@ function Menu(props){
       <div className="menu-header">
         <p>Get Hempn!</p>
       </div>
-      <button name="home" onClick={handleClick}>Home</button>
-      <button name="shop" onClick={handleClick}>Shop</button>
-      <button name="grow" onClick={handleClick}>Grow</button>
-      <button name="login-register" onClick={handleClick}>Login / Register</button>
-      <button name="about" onClick={handleClick}>About</button>
-      
+      <button name="home" onClick={handleClick}>
+        Home
+      </button>
+      <button name="shop" onClick={handleClick}>
+        Shop
+      </button>
+      <button name="grow" onClick={handleClick}>
+        Grow
+      </button>
+      <button name="login-register" onClick={handleClick}>
+        Login / Register
+      </button>
+      <button name="about" onClick={handleClick}>
+        About
+      </button>
     </div>
-  )
-};
-
+  );
+}
 
 export default Menu;

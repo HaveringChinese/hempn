@@ -39,7 +39,7 @@ function App(){
       {page === "user" && <User />}
 
       {/* only loads if "about" is clicked */}
-      {page === "about" && <About />}
+      {page === "about" && <About handlePageChange = {handlePageChange}/>}
 
       
       <Banner 
