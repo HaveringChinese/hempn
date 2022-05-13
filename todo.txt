@@ -8,10 +8,15 @@ Shop:
 - styled shopping cart ...............................
 - styled product tiles 
 
-Grow: 
+Grow:
 - image carousel of example living situations .......
 - styled growth calculator 
 - more fine-tuned growth calculator .................
+- CTA with integrated map API to find nearest hemp store
+
+Advocate:
+- integrate Google maps or other map/zone API which shows used and unused land area, suitable rooftops 
+- 
 
 Login / Register:
 - reconfigure to display in front of any page ..........

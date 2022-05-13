@@ -3,6 +3,7 @@ import Banner from "./constant/Banner";
 import Initial from "./initial/Initial.jsx";
 import Shop from "./shop/Shop";
 import Grow from "./grow/Grow";
+import Advocate from "./advocate/Advocate";
 import User from "./constant/User";
 import About from "./constant/About";
 
@@ -34,6 +35,9 @@ function App(){
       
       {/* only loads if "grow" is clicked */}
       {page === "grow" && <Grow />}
+
+      {/* only loads if "advocate" is clicked */}
+      {page === "advocate" && <Advocate />}
 
       {/* only loads if "login / register" is clicked */}
       {page === "user" && <User />}
